@@ -1,8 +1,7 @@
 services:
-  - type: web
-    name: hft-dashboard
+  - type: worker
+    name: project-apex-bot
     env: python
-    buildCommand: ""
     startCommand: python3 hft_bot.py
     plan: free
     envVars:
@@ -10,3 +9,4 @@ services:
         sync: false
       - key: BINANCE_API_SECRET
         sync: false
+
